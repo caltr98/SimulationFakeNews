@@ -1,0 +1,5 @@
+Ci sono
+414 false news
+595 true-news
+
+On average 5 false news and 5 true news
