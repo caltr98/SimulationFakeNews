@@ -2,8 +2,8 @@ Simulation of spread of fake news inside Online Social Network, developed for my
 
 There are two possibile simulations:
 1) Base Simulation in the root folder, where there are fact checkers that know the ground truth of true/false news and stop the spread if meet a false news
-2) DataSet Model: in this case, the fact checkers work with a synthetic dataset generated with GPT-4o containing **bio** and **articles*** of an author.
-3)  Furthermore being processed by (CAVS)[https://github.com/caltr98/CAVS] to extract skills from both and match them.
+2) DataSet Model: in this case, the fact checkers work with a synthetic dataset generated with GPT-4o containing **bio** and **articles*** of an author. The generating code is in CAVS Repository at section [ProfilesAndNewsGenerator](https://github.com/caltr98/CAVS/tree/master/ProfilesAndNewsGenerator)
+3)  Furthermore being processed by [CAVS](https://github.com/caltr98/CAVS) to extract skills from both and match them. 
 
 
 # Base Simulation run
@@ -143,5 +143,5 @@ The used dataset is cmake-build-debug/file.json. It is a JSON array with entry o
 }
 ```
 In our case, the articles array contains 3 true news article and 2 fake news articles.
-The skills array along with matches_skill (the count) is provided by (CAVS)[https://github.com/caltr98/CAVS].
+The skills array along with matches_skill (the count) is provided by [CAVS](https://github.com/caltr98/CAVS).
 
