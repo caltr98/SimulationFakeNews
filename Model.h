@@ -16,6 +16,7 @@
 
 class Model
 {
+
 protected:
     int numUsers;
     int numCheckers; //subset of numUsers;
@@ -672,6 +673,13 @@ public:
           int epochs);
     Model();
 
+    PostStatsAggregator post_stats_aggregator;
+    UserTrialStatsAggregator user_trial_stats_aggregator;
+    EpochStateStatsAggregator epoch_state_stats_aggregator;
+    std::vector<PostStatsAggregator> postStatsAggregators; // Vector to aggregate post statistics for each trial
+    std::vector<UserTrialStatsAggregator> userStatsAggregators; // Vector to aggregate user trial statistics for each trial
+    std::vector<EpochStateStatsAggregator> epochStatsAggregators; // Vector to aggregate epoch state statistics for each trial
+
 
     virtual void initializeUsers();
     virtual void setupFollowRelationships();
@@ -694,5 +702,11 @@ public:
 
 
     void execute_trials(int n_trials);
+    void execute_trial_with_parameters(double prob_susceptible, double prob_recover, double prob_spreader,
+                                       int trial_index);
+    void finalize(
+        int total_trials) const;
 };
+
+
 #endif // MODEL_H

@@ -1,0 +1,17 @@
+Metric,Average,StandardDeviation
+NumberOfPosts,3003.41,44.6365
+MaxDepth,23.327,2.76835
+MaxBreadth,5,0.506218
+Size,2.627,3.99197
+AverageDepth,2.44973,0.0415926
+AverageBreadth,0.794933,0.0251991
+AverageSize,3.29364,0.0583821
+StdDevSize,4.62034,0.241826
+NumberOfFakePosts,838.7,396.505
+MaxDepthFake,9.927,3.03593
+MaxBreadthFake,3.543,0.657711
+SizeFake,1.73182,0.227662
+NumberOfTruePosts,2164.71,396.788
+MaxDepthTrue,23.327,2.76835
+MaxBreadthTrue,4.996,0.510141
+SizeTrue,3.93445,0.350215

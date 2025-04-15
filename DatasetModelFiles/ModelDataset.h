@@ -661,6 +661,8 @@ public:
     };
 
     std::tuple<int,int> allReSharedPostStats();
+    void execute_trial_with_parameters(double prob_susceptible, double prob_recover, double prob_spreader, int trial_index);
+
 
     std::vector<std::shared_ptr<DatasetUser>> users;
 
@@ -732,6 +734,7 @@ public:
     void printUserTrialStats(const UserTrialStats& user_trial_stats);
     void execute();
     void execute_trials(int n_trials);
+    void finalize(int total_trials) const;
 
     void setupFollowRelationships();
     ModelDataset(int num_users, int num_checkers, double prob_susceptible, double prob_recover, double prob_spreader,
@@ -740,6 +743,9 @@ public:
                  int epochs, std::string engines);
     void initializeUsers(std::string engines, int min_matches);
 
+    PostStatsAggregator post_stats_aggregator;
+    UserTrialStatsAggregator user_trial_stats_aggregator;
+    EpochStateStatsAggregator epoch_state_stats_aggregator;
 
     static void printAggregatedPostTrialStats(const PostStatsAggregator stats);
     static void printAggregatedUserTrialStats(const UserTrialStatsAggregator stats);

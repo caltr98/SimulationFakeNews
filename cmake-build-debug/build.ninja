@@ -51,61 +51,61 @@ build cmake_object_order_depends_target_untitled: phony || CMakeFiles/untitled.d
 
 build CMakeFiles/untitled.dir/main.cpp.obj: CXX_COMPILER__untitled_unscanned_Debug C$:/Users/iperc/CLionProjects/untitled/main.cpp || cmake_object_order_depends_target_untitled
   DEP_FILE = CMakeFiles\untitled.dir\main.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always
+  FLAGS = -fopenmp -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\untitled.dir
   OBJECT_FILE_DIR = CMakeFiles\untitled.dir
 
 build CMakeFiles/untitled.dir/Post.cpp.obj: CXX_COMPILER__untitled_unscanned_Debug C$:/Users/iperc/CLionProjects/untitled/Post.cpp || cmake_object_order_depends_target_untitled
   DEP_FILE = CMakeFiles\untitled.dir\Post.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always
+  FLAGS = -fopenmp -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\untitled.dir
   OBJECT_FILE_DIR = CMakeFiles\untitled.dir
 
 build CMakeFiles/untitled.dir/User.cpp.obj: CXX_COMPILER__untitled_unscanned_Debug C$:/Users/iperc/CLionProjects/untitled/User.cpp || cmake_object_order_depends_target_untitled
   DEP_FILE = CMakeFiles\untitled.dir\User.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always
+  FLAGS = -fopenmp -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\untitled.dir
   OBJECT_FILE_DIR = CMakeFiles\untitled.dir
 
 build CMakeFiles/untitled.dir/Checker.cpp.obj: CXX_COMPILER__untitled_unscanned_Debug C$:/Users/iperc/CLionProjects/untitled/Checker.cpp || cmake_object_order_depends_target_untitled
   DEP_FILE = CMakeFiles\untitled.dir\Checker.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always
+  FLAGS = -fopenmp -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\untitled.dir
   OBJECT_FILE_DIR = CMakeFiles\untitled.dir
 
 build CMakeFiles/untitled.dir/Model.cpp.obj: CXX_COMPILER__untitled_unscanned_Debug C$:/Users/iperc/CLionProjects/untitled/Model.cpp || cmake_object_order_depends_target_untitled
   DEP_FILE = CMakeFiles\untitled.dir\Model.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always
+  FLAGS = -fopenmp -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\untitled.dir
   OBJECT_FILE_DIR = CMakeFiles\untitled.dir
 
 build CMakeFiles/untitled.dir/DatasetModelFiles/DatasetPost.cpp.obj: CXX_COMPILER__untitled_unscanned_Debug C$:/Users/iperc/CLionProjects/untitled/DatasetModelFiles/DatasetPost.cpp || cmake_object_order_depends_target_untitled
   DEP_FILE = CMakeFiles\untitled.dir\DatasetModelFiles\DatasetPost.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always
+  FLAGS = -fopenmp -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\untitled.dir
   OBJECT_FILE_DIR = CMakeFiles\untitled.dir\DatasetModelFiles
 
 build CMakeFiles/untitled.dir/DatasetModelFiles/DatasetUser.cpp.obj: CXX_COMPILER__untitled_unscanned_Debug C$:/Users/iperc/CLionProjects/untitled/DatasetModelFiles/DatasetUser.cpp || cmake_object_order_depends_target_untitled
   DEP_FILE = CMakeFiles\untitled.dir\DatasetModelFiles\DatasetUser.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always
+  FLAGS = -fopenmp -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\untitled.dir
   OBJECT_FILE_DIR = CMakeFiles\untitled.dir\DatasetModelFiles
 
 build CMakeFiles/untitled.dir/DatasetModelFiles/ModelDataset.cpp.obj: CXX_COMPILER__untitled_unscanned_Debug C$:/Users/iperc/CLionProjects/untitled/DatasetModelFiles/ModelDataset.cpp || cmake_object_order_depends_target_untitled
   DEP_FILE = CMakeFiles\untitled.dir\DatasetModelFiles\ModelDataset.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always
+  FLAGS = -fopenmp -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\untitled.dir
   OBJECT_FILE_DIR = CMakeFiles\untitled.dir\DatasetModelFiles
 
 build CMakeFiles/untitled.dir/DatasetModelFiles/DataSetChecker.cpp.obj: CXX_COMPILER__untitled_unscanned_Debug C$:/Users/iperc/CLionProjects/untitled/DatasetModelFiles/DataSetChecker.cpp || cmake_object_order_depends_target_untitled
   DEP_FILE = CMakeFiles\untitled.dir\DatasetModelFiles\DataSetChecker.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always
+  FLAGS = -fopenmp -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\untitled.dir
   OBJECT_FILE_DIR = CMakeFiles\untitled.dir\DatasetModelFiles
 
 build CMakeFiles/untitled.dir/DatasetModelFiles/HTTPRequester.cpp.obj: CXX_COMPILER__untitled_unscanned_Debug C$:/Users/iperc/CLionProjects/untitled/DatasetModelFiles/HTTPRequester.cpp || cmake_object_order_depends_target_untitled
   DEP_FILE = CMakeFiles\untitled.dir\DatasetModelFiles\HTTPRequester.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always
+  FLAGS = -fopenmp -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\untitled.dir
   OBJECT_FILE_DIR = CMakeFiles\untitled.dir\DatasetModelFiles
 
@@ -118,7 +118,7 @@ build CMakeFiles/untitled.dir/DatasetModelFiles/HTTPRequester.cpp.obj: CXX_COMPI
 # Link the executable untitled.exe
 
 build untitled.exe: CXX_EXECUTABLE_LINKER__untitled_Debug CMakeFiles/untitled.dir/main.cpp.obj CMakeFiles/untitled.dir/Post.cpp.obj CMakeFiles/untitled.dir/User.cpp.obj CMakeFiles/untitled.dir/Checker.cpp.obj CMakeFiles/untitled.dir/Model.cpp.obj CMakeFiles/untitled.dir/DatasetModelFiles/DatasetPost.cpp.obj CMakeFiles/untitled.dir/DatasetModelFiles/DatasetUser.cpp.obj CMakeFiles/untitled.dir/DatasetModelFiles/ModelDataset.cpp.obj CMakeFiles/untitled.dir/DatasetModelFiles/DataSetChecker.cpp.obj CMakeFiles/untitled.dir/DatasetModelFiles/HTTPRequester.cpp.obj
-  FLAGS = -g
+  FLAGS = -fopenmp -g
   LINK_LIBRARIES = -lWs2_32  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\untitled.dir
   POST_BUILD = cd .
@@ -172,14 +172,14 @@ build all: phony untitled.exe
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/WindowsPaths.cmake C$:/Users/iperc/CLionProjects/untitled/CMakeLists.txt CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeCXXCompiler.cmake CMakeFiles/3.28.1/CMakeRCCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeParseImplicitLinkInfo.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/FindOpenMP.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/FindPackageMessage.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/WindowsPaths.cmake C$:/Users/iperc/CLionProjects/untitled/CMakeLists.txt CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeCXXCompiler.cmake CMakeFiles/3.28.1/CMakeRCCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/WindowsPaths.cmake C$:/Users/iperc/CLionProjects/untitled/CMakeLists.txt CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeCXXCompiler.cmake CMakeFiles/3.28.1/CMakeRCCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake: phony
+build C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeParseImplicitLinkInfo.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/FindOpenMP.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/FindPackageMessage.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/WindowsPaths.cmake C$:/Users/iperc/CLionProjects/untitled/CMakeLists.txt CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeCXXCompiler.cmake CMakeFiles/3.28.1/CMakeRCCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake: phony
 
 
 #############################################

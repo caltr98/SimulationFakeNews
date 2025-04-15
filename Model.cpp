@@ -218,10 +218,6 @@ void Model::csvAggregatedEpochStateStats(const EpochStateStatsAggregator stats, 
 // Execute multiple trials and print aggregated statistics
 // Execute multiple trials and print aggregated statistics
 void Model::execute_trials(int n_trials) {
-    std::vector<PostStatsAggregator> postStatsAggregators(n_trials); // Vector to aggregate post statistics for each trial
-    std::vector<UserTrialStatsAggregator> userStatsAggregators(n_trials); // Vector to aggregate user trial statistics for each trial
-    std::vector<EpochStateStatsAggregator> epochStatsAggregators(n_trials); // Vector to aggregate epoch state statistics for each trial
-
 
     PostStatsAggregator post_stats_aggregator;
     UserTrialStatsAggregator user_trial_stats_aggregator;
@@ -254,4 +250,50 @@ void Model::execute_trials(int n_trials) {
     csvAggregatedUserTrialStats(user_trial_stats_aggregator);
     csvAggregatedEpochStateStats(epoch_state_stats_aggregator, n_trials);
 
+}
+
+// Execute a single trial with custom parameters and store aggregated results
+void Model::execute_trial_with_parameters(double prob_susceptible, double prob_recover, double prob_spreader, int trial_index)
+{
+    // Set custom probabilities
+    this->prob_susceptible = prob_susceptible;
+    this->prob_recover = prob_recover;
+    this->prob_spreader = prob_spreader;
+
+    // Reset users and initialize the simulation with new parameters and new friendship relationships
+    users.clear();
+    initializeUsers();
+
+    // Run the simulation for the specified number of epochs
+    for (int i = 0; i < epochs; ++i) {
+        for (auto user : users) {
+            user->Act();  // Perform user actions per epoch
+        }
+    }
+
+    // Collect and aggregate statistics for this trial
+    post_stats_aggregator.update(collectPostStats());
+    user_trial_stats_aggregator.update(collectUserTrialStats());
+    epoch_state_stats_aggregator.update(collectMostPopularStatePerEpoch());
+
+
+
+}
+
+// Finalize function: output all aggregated results to CSV files
+void Model::finalize(int total_trials) const
+{
+    // Reinitialize aggregators before finalizing
+    std::cout << "Finalizing results and exporting to files..." << std::endl;
+
+    // Print aggregated statistics to console (optional)
+    printAggregatedPostTrialStats(post_stats_aggregator);
+    printAggregatedUserTrialStats(user_trial_stats_aggregator);
+
+    // Store results into CSV files
+    csvAggregatedPostTrialStats(post_stats_aggregator);
+    csvAggregatedUserTrialStats(user_trial_stats_aggregator);
+    csvAggregatedEpochStateStats(epoch_state_stats_aggregator, total_trials);
+
+    std::cout << "Results successfully saved to files!" << std::endl;
 }

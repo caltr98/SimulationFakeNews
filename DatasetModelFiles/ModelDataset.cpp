@@ -65,11 +65,6 @@ void ModelDataset::initializeUsers(std::string engines,int min_matches)
     std::mt19937 g(rd());
     std::shuffle(users.begin(), users.end(), g);
 
-    // Example output for the number of false news articles for the first user
-    if (!users.empty()) {
-        std::cout << "Number of false news articles for the first user: " << users.at(0)->false_news.size() << std::endl;
-    }
-
     setupFollowRelationships();
 }
 
@@ -327,4 +322,53 @@ void ModelDataset::execute_trials(int n_trials) {
     csvAggregatedEpochStateStats(epoch_state_stats_aggregator, n_trials);
 }
 
+
+
+void ModelDataset::execute_trial_with_parameters(double prob_susceptible, double prob_recover, double prob_spreader,
+    int trial_index)
+{
+    // Set custom probabilities
+    this->prob_susceptible = prob_susceptible;
+    this->prob_recover = prob_recover;
+    this->prob_spreader = prob_spreader;
+
+    // Reset users and initialize the simulation with new parameters and new friendship relationships
+    users.clear();
+    initializeUsers((this->engine),min_matches);
+
+    // Run the simulation for the specified number of epochs
+    for (int i = 0; i < epochs; ++i) {
+        for (auto user : users) {
+            user->Act();  // Perform user actions per epoch
+        }
+    }
+
+    // Collect and aggregate statistics for this trial
+    post_stats_aggregator.update(collectPostStats());
+    user_trial_stats_aggregator.update(collectUserTrialStats());
+    epoch_state_stats_aggregator.update(collectMostPopularStatePerEpoch());
+
+
+
+
+}
+
+
+// Finalize function: output all aggregated results to CSV files
+void ModelDataset::finalize(int total_trials) const
+{
+    // Reinitialize aggregators before finalizing
+    std::cout << "Finalizing results and exporting to files..." << std::endl;
+
+    // Print aggregated statistics to console (optional)
+    printAggregatedPostTrialStats(post_stats_aggregator);
+    printAggregatedUserTrialStats(user_trial_stats_aggregator);
+
+    // Store results into CSV files
+    csvAggregatedPostTrialStats(post_stats_aggregator);
+    csvAggregatedUserTrialStats(user_trial_stats_aggregator);
+    csvAggregatedEpochStateStats(epoch_state_stats_aggregator, total_trials);
+
+    std::cout << "Results successfully saved to files!" << std::endl;
+}
 

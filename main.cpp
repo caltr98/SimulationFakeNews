@@ -3,6 +3,7 @@
 //
 #include "Model.h"
 #include "./DatasetModelFiles/ModelDataset.h"
+#include <omp.h>
 
 namespace fs = std::filesystem;
 
@@ -12,52 +13,74 @@ void printDirectoryElements(const std::string& path) {
     }
 }
 
+
+void run_monte_carlo_simulation_ground_truth(int num_runs, int num_users, int num_checkers, int epochs, int seed) {
+    std::mt19937 gen(seed);  // Use seed passed from main
+    std::uniform_real_distribution<> prob_dist(0.1, 0.9);
+
+    // Ground Truth simulation
+    Model ground_truth_model(num_users, num_checkers, 0, 0, 0, epochs);
+
+    // Parallelize the simulation runs
+    for (int i = 0; i < num_runs; i++) {
+        // Randomize probabilities for each run
+        double prob_susceptible = prob_dist(gen);
+        double prob_recover = prob_dist(gen);
+        double prob_spreader = prob_dist(gen);
+
+        ground_truth_model.execute_trial_with_parameters(prob_susceptible, prob_recover, prob_spreader, i);
+
+        // Check if the current epoch is a multiple of 20 and print
+        if (i % 20 == 0) {
+            std::cout << "index " << i << " completed " << num_runs << " runs." << std::endl;
+            std::cout << "Probabilities: Susceptible = " << prob_susceptible
+                      << ", Recover = " << prob_recover
+                      << ", Spreader = " << prob_spreader << std::endl;
+        }
+    }
+
+    ground_truth_model.finalize(num_runs);
+}
+
+void run_monte_carlo_simulation_skill_based(int num_runs, int num_users, int num_checkers, int epochs, int seed) {
+    std::mt19937 gen(seed);  // Use seed passed from main
+    std::uniform_real_distribution<> prob_dist(0.1, 0.9);
+
+    // Skill Based simulation
+    ModelDataset skill_based_model(num_users, num_checkers, 0, 0, 0, epochs, "", 1);
+
+    // Parallelize the simulation runs
+    for (int i = 0; i < num_runs; i++) {
+        // Randomize probabilities for each run
+        double prob_susceptible = prob_dist(gen);
+        double prob_recover = prob_dist(gen);
+        double prob_spreader = prob_dist(gen);
+
+
+        skill_based_model.execute_trial_with_parameters(prob_susceptible, prob_recover, prob_spreader, i);
+
+
+        // Check if the current epoch is a multiple of 20 and print
+        if (i % 20 == 0) {
+            std::cout << "index " << i << " completed " << num_runs << " runs." << std::endl;
+            std::cout << "Probabilities: Susceptible = " << prob_susceptible
+                      << ", Recover = " << prob_recover
+                      << ", Spreader = " << prob_spreader << std::endl;
+        }
+    }
+    skill_based_model.finalize(num_runs);
+}
+
 int main() {
-
-    /*
-    std::vector<std::string> str;
-    str.push_back("Java");
-    str.push_back("Javascript");
-    std::tuple<int,int,int> x;
-
     // Parameters for Model initialization
-    int num_users = 100;  // Number of users
-    int num_checkers = 10;  // Number of checkers
-    double prob_susceptible = 0.7;  // Probability of being susceptible
-    double prob_recover = 0.2;  // Probability of recovery
-    double prob_spreader = 0.3;  // Probability of being a spreader
-    int epochs = 1000;  // Number of epochs
+    int num_users = 100;
+    int num_checkers = 60;
+    int epochs = 100;
+    int monte_carlo_runs = 1000;
+    int seed = 42;  // Fixed seed
 
-    // Create an instance of Model
-    Model model(num_users, num_checkers, prob_susceptible, prob_recover, prob_spreader, epochs);
-
-    // Execute the simulation
-    //model.execute();
-    model.execute_trials(15);
-
-    */
-    std::string path = "./"; // specify the directory path
-    printDirectoryElements(path);
-
-
-    // Parameters for Model initialization
-    int num_users = 100;  // Number of users
-    int num_checkers = 70;  // Number of checkers
-    double prob_susceptible = 0.7   ;  // Probability of being susceptible
-    double prob_recover = 0.2;  // Probability of recovery
-    double prob_spreader = 0.3;  // Probability of being a spreader
-    int epochs = 1000;  // Number of epochs
-
-    // Create an instance of Model
-    //ModelDataset model(num_users, num_checkers, prob_susceptible, prob_recover, prob_spreader, epochs,"BERT+OJDAPP",    1);
-
-    Model model(num_users, num_checkers, prob_susceptible, prob_recover, prob_spreader, epochs);
-
-    //Model model(num_users, num_checkers, prob_susceptible, prob_recover, prob_spreader, epochs);
-    // Execute the simulation
-    //model.execute();
-    model.execute_trials(10);
-
+    //run_monte_carlo_simulation_ground_truth(monte_carlo_runs, num_users, num_checkers, epochs, seed);
+    run_monte_carlo_simulation_skill_based(monte_carlo_runs, num_users, num_checkers, epochs, seed);
 
 
     return 0;
